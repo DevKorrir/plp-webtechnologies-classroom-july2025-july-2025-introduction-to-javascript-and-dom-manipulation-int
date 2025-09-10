@@ -1,0 +1,100 @@
+
+:root {
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent: #0b6efd;
+  --text: #1f2937;
+  --muted: #6b7280;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+html,body { 
+    height: 100%;
+     margin: 0; 
+     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+     background: var(--bg); 
+     color: var(--text); 
+    }
+
+header { 
+    padding: 1rem; 
+    text-align: center; 
+    background: linear-gradient(90deg,#e6f0ff,#ffffff); 
+    border-bottom: 1px solid #e6e9ef; 
+}
+
+main { 
+    padding: 1rem; 
+    max-width: 1000px;
+     margin: 1rem auto; 
+    }
+
+.card {
+     background: var(--card); 
+     padding: 1rem; 
+     border-radius: 8px; 
+     margin-bottom: 1rem; 
+     box-shadow: 0 6px 18px rgba(16,24,40,0.06); 
+    }
+
+.card h2 { 
+    margin-top: 0; 
+}
+
+label {
+    display: block; 
+    margin-top: 0.6rem; 
+    font-size: 0.95rem; 
+    color: var(--muted); 
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="tel"] { 
+    width: 100%; padding: 0.5rem; 
+    margin-top: 0.25rem; 
+    border: 1px solid #d1d5db;
+     border-radius: 6px; 
+}
+
+button { 
+    background: var(--accent); 
+    color: white; 
+    border: none;
+     padding: 0.6rem 0.9rem; 
+     border-radius: 6px; 
+     cursor: pointer;
+      margin-top: 0.75rem; 
+    }
+button:hover { 
+    opacity: 0.95; 
+    transform: translateY(-1px); 
+    transition: all 120ms ease; 
+}
+
+.result { margin-top: 0.75rem; padding: 0.6rem; background: #f3f4f6; border-radius: 6px; color: var(--text); }
+ul { padding-left: 1.2rem; margin-top: 0.6rem; }
+.row { display:flex; gap:0.5rem; align-items:center; margin-top:0.5rem; }
+
+/* Cards grid */
+
+.cards-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 0.6rem; }
+.card-small { border-radius: 8px; padding: 0.6rem; background:#ffffff; border-left: 4px solid var(--accent); }
+
+/* Footer */
+footer { text-align:center; padding: 1rem; color: var(--muted); }
+
+/* Dark theme (toggle) */
+.dark {
+  background: #0b1220 !important;
+  color: #e6eef8 !important;
+}
+.dark .card { background: #071126; box-shadow: none; border: 1px solid rgba(255,255,255,0.04); }
+.dark button { background: #2b6cb0; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  main { padding: 0.75rem; }
+  .card { padding: 0.75rem; }
+}
